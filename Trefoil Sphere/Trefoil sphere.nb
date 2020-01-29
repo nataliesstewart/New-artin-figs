@@ -1,0 +1,163 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4774,        154]
+NotebookOptionsPosition[      4369,        135]
+NotebookOutlinePosition[      4727,        151]
+CellTagsIndexPosition[      4684,        148]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[BoxData[
+ RowBox[{"\[IndentingNewLine]", 
+  RowBox[{
+   RowBox[{"f", "[", 
+    RowBox[{"x_", ",", "y_"}], "]"}], ":=", 
+   RowBox[{
+    RowBox[{"x", "^", "2"}], "+", 
+    RowBox[{"y", "^", "3"}]}]}]}]], "Input",
+ CellChangeTimes->{{3.62343984409235*^9, 3.623439848497457*^9}, {
+   3.623443204079578*^9, 3.623443214556093*^9}, 3.623443633722576*^9, {
+   3.631899871248699*^9, 3.631899875325877*^9}}],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"g", "[", 
+   RowBox[{"x_", ",", "y_"}], "]"}], ":=", " ", 
+  RowBox[{
+   RowBox[{"x", "*", 
+    RowBox[{"Conjugate", "[", "x", "]"}]}], "+", 
+   RowBox[{"y", "*", 
+    RowBox[{"Conjugate", "[", "y", "]"}]}], "-", "1"}]}]], "Input",
+ CellChangeTimes->{{3.6234433755983686`*^9, 3.623443385634962*^9}, {
+  3.623443439627789*^9, 3.623443464857072*^9}}],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"With", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{
+     RowBox[{"x", "=", 
+      RowBox[{"a", "+", 
+       RowBox[{"I", " ", "c"}]}]}], ",", 
+     RowBox[{"y", "=", 
+      RowBox[{"b", "+", 
+       RowBox[{"5", "*", "I"}]}]}]}], "}"}], ",", 
+   RowBox[{"ContourPlot3D", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"Re", "@", 
+        RowBox[{"f", "[", 
+         RowBox[{"x", ",", "y"}], "]"}]}], ",", 
+       RowBox[{"Im", "@", 
+        RowBox[{"f", "[", 
+         RowBox[{"x", ",", "y"}], "]"}]}], ",", 
+       RowBox[{"Re", "@", 
+        RowBox[{"g", "[", 
+         RowBox[{"x", ",", "y"}], "]"}]}], ",", 
+       RowBox[{"Im", "@", 
+        RowBox[{"g", "[", 
+         RowBox[{"x", ",", "y"}], "]"}]}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"a", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"b", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"c", ",", 
+       RowBox[{"-", "2"}], ",", "2"}], "}"}], ",", 
+     RowBox[{"Contours", "\[Rule]", 
+      RowBox[{"{", "0", "}"}]}], ",", 
+     RowBox[{"Mesh", "\[Rule]", "None"}], ",", 
+     RowBox[{"ContourStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Lighter", "@", 
+           RowBox[{"Lighter", "@", "Blue"}]}], ",", 
+          RowBox[{"Opacity", "[", "0.4", "]"}]}], "]"}], ",", 
+        RowBox[{"Directive", "[", 
+         RowBox[{
+          RowBox[{"Lighter", "@", 
+           RowBox[{"Lighter", "@", "Red"}]}], ",", 
+          RowBox[{"Opacity", "[", "0.4", "]"}]}], "]"}]}], "}"}]}], ",", 
+     RowBox[{"BoundaryStyle", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", "None"}], ",", 
+        RowBox[{"2", "\[Rule]", "None"}], ",", 
+        RowBox[{
+         RowBox[{"{", 
+          RowBox[{"1", ",", "2"}], "}"}], "\[Rule]", 
+         RowBox[{"ColorData", "[", 
+          RowBox[{"1", ",", "1"}], "]"}]}]}], "}"}]}], ",", 
+     RowBox[{"PlotPoints", "\[Rule]", "50"}], ",", 
+     RowBox[{"MaxRecursion", "\[Rule]", "0"}]}], "]"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6319001802233953`*^9, 3.63190018861272*^9}, {
+  3.631900227495388*^9, 3.631900237287464*^9}}],
+
+Cell[BoxData[
+ Graphics3DBox[{},
+  Axes->True,
+  BoxRatios->{1, 1, 1},
+  DisplayFunction->Identity,
+  FaceGridsStyle->Automatic,
+  ImageSize->{495.4909649607235, 553.},
+  Method->{"DefaultBoundaryStyle" -> Directive[
+      GrayLevel[0.3]]},
+  PlotRange->{{-2, 2}, {-2, 2}, {-2, 2}},
+  PlotRangePadding->{
+    Scaled[0.02], 
+    Scaled[0.02], 
+    Scaled[0.02]},
+  Ticks->{Automatic, Automatic, Automatic},
+  ViewPoint->{-0.06146692962997809, -3.344162332015416, -0.5126403356068255},
+  ViewVertical->{0.45729726435467005`, -0.6920755437027927, 
+   0.5584896183656586}]], "Output",
+ CellChangeTimes->{3.6234435291039553`*^9, 3.631900097196519*^9, 
+  3.631900203889401*^9, 3.631900258645446*^9}]
+}, Open  ]]
+},
+WindowSize->{808, 603},
+WindowMargins->{{98, Automatic}, {Automatic, 37}},
+FrontEndVersion->"10.0 for Mac OS X x86 (32-bit, 64-bit Kernel) (September 9, \
+2014)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 403, 10, 46, "Input"],
+Cell[964, 32, 383, 10, 28, "Input"],
+Cell[CellGroupData[{
+Cell[1372, 46, 2285, 65, 131, "Input"],
+Cell[3660, 113, 693, 19, 602, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

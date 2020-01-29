@@ -1,0 +1,2 @@
+For ruled hyperboloid:
+https://mathematica.stackexchange.com/questions/79524/how-to-draw-a-circle-in-3d-on-a-sphere

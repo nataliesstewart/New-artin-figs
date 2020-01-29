@@ -1,0 +1,33 @@
+\documentclass{standalone}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{tkz-fct}
+\usepackage{pgfplots}
+
+\usepackage[active,tightpage]{preview}      
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+
+% Libraries
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{trees}
+\usetikzlibrary{plotmarks}
+
+\pgfplotsset{compat=newest,every axis/.append style={
+                    axis x line=middle,    % put the x axis in the middle
+                    axis y line=middle,    % put the y axis in the middle
+                    axis line style={-,color=black}, % arrows on the axis
+                    ticks=none % take away ticks
+            }}
+\tikzset{every pin edge/.style={draw=white}}
+\begin{document}
+\begin{tikzpicture}
+\begin{axis}
+  \addplot [mark=none, thick, black] {x^2};
+  \addplot [mark=none, thick, black] {-x^2};
+\end{axis}
+\end{tikzpicture}
+\end{document}

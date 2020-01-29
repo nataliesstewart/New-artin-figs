@@ -1,0 +1,66 @@
+\documentclass{minimal}
+
+% Packages
+
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{tkz-fct}
+\usepackage{pgfplots}
+
+\usepackage[active,tightpage]{preview}      
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+
+% Libraries
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{trees}
+\usetikzlibrary{plotmarks}
+
+% TiKz Styling
+
+\pgfplotsset{compat=newest,every axis/.append style={
+                    axis x line=middle,    % put the x axis in the middle
+                    axis y line=middle,    % put the y axis in the middle
+                    axis line style={-,color=black}, % arrows on the axis
+                    xlabel={$x(t)$},          % default put x on x-axis
+                    ylabel={$y(t)$},          % default put y on y-axis
+                    ticks=none % take away ticks
+            }}
+            
+\tikzset{every pin edge/.style={draw=white}}
+
+
+\begin{document}
+
+  \begin{tikzpicture}
+  \begin{axis}[
+		xlabel=,
+		ylabel=,
+		grid=none,
+    axis lines=none,
+  ]
+
+ % ``Fish curve'', with ``slice'' out of it to show layering.
+  \addplot [thick,black, domain=-1.5:-1.02,samples=1000](x^2-1, x^3-x);
+  \addplot [thick,black, domain=-.98:1.5,samples=1000](x^2-1, x^3-x);
+  
+  % Vertical dashed line
+  % Note: aspect ratio is not 1 to 1, so circles are tall elipses
+  \draw[dashed] (.5,-.6) -- (.5,.6);
+  \draw[fill] (.5,-.6) circle (.025);
+  \draw[fill] (.5,.6) circle (.025);
+  
+  
+  % xoffset is distance between the two curves
+  \def\xoffset{3}
+  \draw[->,dashed] (1,0) -- (\xoffset-1.25,0);
+  \addplot [thick,black, domain=-1.25:1.25,samples=1000](1.5*x^2-1+\xoffset, x^3-x);
+  \draw[fill] (.5+\xoffset,0) circle (.025);
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

@@ -1,0 +1,12 @@
+\documentclass[pstricks]{standalone}
+\usepackage{pst-solides3d}
+
+\begin{document}
+\begin{pspicture}(-9,-5)(9,5)\psset{viewpoint=55 30 50 rtp2xyz,Decran=50,lightsrc=55 180 90 rtp2xyz,solidmemory,
+       object=tore,r1=3,r0=1.5,ngrid=100 100,fillcolor=magenta!10!white,lightintensity=.75}
+\psSolid[name=toreA,action=none](0,3,0)
+\psSolid[name=toreB,action=none](0,-3,0)
+\psSolid[object=fusion,base=toreA toreB,grid=false]
+\end{pspicture}
+
+\end{document}

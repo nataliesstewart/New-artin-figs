@@ -1,0 +1,47 @@
+\documentclass{minimal}
+
+% Packages
+
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{tkz-fct}
+\usepackage{pgfplots}
+
+\usepackage[active,tightpage]{preview}      
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+
+% Libraries
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{trees}
+\usetikzlibrary{plotmarks}
+
+% TiKz Styling
+
+\pgfplotsset{compat=newest,every axis/.append style={
+                    axis x line=middle,    % put the x axis in the middle
+                    axis y line=middle,    % put the y axis in the middle
+                    axis line style={-,color=black}, % arrows on the axis
+                    xlabel={$x(t)$},          % default put x on x-axis
+                    ylabel={$y(t)$},          % default put y on y-axis
+                    ticks=none % take away ticks
+            }}
+            
+\tikzset{every pin edge/.style={draw=white}}
+
+
+\begin{document}
+
+\def\offset{.25}
+\begin{center}
+	\begin{tikzpicture}
+  \draw (0,0) arc (-45:-135:1);
+  \draw (0,-.3) -- (-1.4,-.3);
+\end{tikzpicture}
+\end{center}
+
+\end{document}

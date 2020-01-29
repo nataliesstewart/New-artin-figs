@@ -1,0 +1,60 @@
+\documentclass{minimal}
+
+% Packages
+
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{tkz-fct}
+\usepackage{pgfplots}
+
+\usepackage[active,tightpage]{preview}      
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+
+% Libraries
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{trees}
+\usetikzlibrary{plotmarks}
+
+% TiKz Styling
+
+\pgfplotsset{compat=newest,every axis/.append style={
+                    axis x line=middle,    % put the x axis in the middle
+                    axis y line=middle,    % put the y axis in the middle
+                    axis line style={-,color=black}, % arrows on the axis
+                    xlabel={$x(t)$},          % default put x on x-axis
+                    ylabel={$y(t)$},          % default put y on y-axis
+                    ticks=none % take away ticks
+            }}
+            
+\tikzset{every pin edge/.style={draw=white}}
+
+
+\begin{document}
+
+
+\begin{center}
+	\begin{tikzpicture}
+  \begin{axis}[
+		xlabel=,
+		ylabel=,
+		xmin = -1.1,
+    %xmin=-4.5,xmax=4.5,
+		%ymin=-4.5,ymax=4.5,
+		grid=none,
+    axis lines=none
+  ]
+
+		\addplot [thick,black,domain=-1:0,samples=5000]({x},{sqrt(x^3 - x)}); 
+		\addplot [thick,black,domain=1:2,samples=1000]({x},{sqrt(x^3 - x)}); 
+    \addplot [thick,black,domain=-1:0,samples=5000]({x},{-sqrt(x^3 - x)}); 
+		\addplot [thick,black,domain=1:2,samples=1000]({x},{-sqrt(x^3 - x)}); 
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\end{document}

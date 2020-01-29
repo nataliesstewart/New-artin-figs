@@ -1,0 +1,62 @@
+\documentclass{minimal}
+
+% Packages
+
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{tkz-fct}
+\usepackage{pgfplots}
+
+\usepackage[active,tightpage]{preview}      
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+
+% Libraries
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{trees}
+
+% TiKz Styling
+
+\pgfplotsset{compat=1.8,every axis/.append style={
+                    %axis x line=middle,    % put the x axis in the middle
+                    axis x line=none,    % put the y axis in the middle
+                    axis y line=none,    % put the y axis in the middle
+                    axis line style={}, % arrows on the axis
+                    xlabel={$x(t)$},          % default put x on x-axis
+                    ylabel={$y(t)$},          % default put y on y-axis
+                    ticks=none % take away ticks
+            }}
+            
+\tikzset{every pin edge/.style={draw=white}}
+
+
+\begin{document}
+
+
+\begin{center}
+\begin{tikzpicture}
+  \path[draw, thick] (1,0) -- (4,5.75);
+    \begin{axis}[
+			xlabel=,
+	   		ylabel=,
+            xmin=-1.5,xmax=1.5,
+            ymin=-1.5,ymax=1.5,
+            grid=none,
+            ]
+            \addplot [thick,black, domain=-3:3,samples=100](x^2-1, x^3-x)
+            {};
+%            \addplot [thick,green, domain=-7:7,samples=100](x,x)
+%                        {};  
+    \end{axis}
+    \draw[fill=black] (3,1.5) circle [radius=.03cm];
+    \draw[fill=black] (4,2.75) circle [radius=.03cm];
+    \draw[fill=black] (2,2.5) circle [radius=.03cm];
+    \draw[fill=black] (2.15,5.5) circle [radius=.03cm];
+\end{tikzpicture}
+\end{center}
+
+\end{document}

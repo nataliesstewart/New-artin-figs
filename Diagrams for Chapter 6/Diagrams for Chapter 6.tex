@@ -1,0 +1,420 @@
+\documentclass[leqno]{amsart}
+
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{tkz-fct}
+\usepackage{tikz-cd}
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{trees}
+\tikzset{
+	commutative diagrams/.cd, 
+	arrow style=tikz, 
+	diagrams={>=stealth}
+}
+
+\pgfdeclaredecoration{single line}{initial}{\state{initial}[width=\pgfdecoratedpathlength-1sp]{\pgfpathmoveto{\pgfpointorigin}}\state{final}{\pgfpathlineto{\pgfpointorigin}}} 
+
+\title{Diagrams for Chapter 6}
+
+\author{Peter J. Haine}
+
+\date{\today}
+
+
+\begin{document}
+	\maketitle
+
+	\subsection*{Diagram 6.2.8}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{M}(X) \arrow{r} & \mathcal{M}(\mathbb{U}_0) \arrow{r} & \mathcal{M}(\mathbb{U}_1)
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.2.9}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{M}(X)_s \arrow{r} & \mathcal{M}(\mathbb{U}_0)_s \arrow{r} & \mathcal{M}(\mathbb{U}_1)_s
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.2.10}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{M}(X_s) \arrow{r} & \mathcal{M}(\mathbb{U}_{0,s}) \arrow{r} & \mathcal{M}(\mathbb{U}_{1,s})
+		\end{tikzcd}
+	\end{equation*}
+	
+	\subsection*{Diagram 6.2.12}
+
+	\begin{equation*}
+		\begin{tikzcd}
+			\mathcal{M}(U) \arrow{r}{\phi(U)} \arrow{d}[swap]{j^{\ast}} & \mathcal{N}(U) \arrow{d}[swap]{j^{\ast}} \\
+			\mathcal{M}(V) \arrow{r}{\phi(V)}  & \mathcal{N}(U)
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram before 6.3.1}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{O}(r) \times \mathcal{O}(s) \arrow{r}  & \mathcal{O}(r+s) 
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.3.1}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{O}(U) \arrow{r}{f} & \mathcal{O}(k+d) \rlap{\  .}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.2.12}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{O}(-d) \arrow{r}{f} & \mathcal{O}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.4.2}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			U &  \arrow{l} \mathbb{U}_0 & \mathbb{U}_1 \arrow[shift right]{l} \arrow[shift left]{l} 
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.4.3}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{M}(U) \arrow{r}{\alpha} & \mathcal{M}(\mathbb{U}_0) \arrow{r}{\beta} & \mathcal{M}(\mathbb{U}_1)
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram in Corollary 6.4.5}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{M}(U) \arrow{r} & \mathcal{M}(U^0) \oplus \mathcal{M}(U^1) \arrow{r} & \mathcal{M}(U^0 \cap U^1)
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.5.3}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \widetilde{\mathcal{M}}(Y) \arrow{r}{\alpha} & \mathcal{M}(\mathbb{U}_0) \arrow{r}{\beta} & \mathcal{M}(\mathbb{U}_1)
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.5.5}
+
+	\begin{equation*}
+		\begin{tikzcd}
+			\mathbb{U}_1 \arrow[shift right]{d} \arrow[shift left]{d} & \mathbb{U}_1 \mathbb{V}_0 \arrow[shift right]{d} \arrow[shift left]{d} \arrow{l} & \\ 
+			\mathbb{U}_0 \arrow{d} & \mathbb{U}_0 \mathbb{V}_0  \arrow{d} \arrow{l} & \mathbb{U}_0 \mathbb{V}_1 \arrow[shift right]{l} \arrow[shift left]{l} \\ 
+			Y & \mathbb{V}_0 \arrow{l} & \mathbb{V}_1 \arrow[shift right]{l} \arrow[shift left]{l}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.5.6}
+
+	\begin{equation*}
+		\begin{tikzcd}
+			0 \arrow{r} & \mathcal{M}(\mathbb{U}_1) \arrow{r} & \mathcal{M}(\mathbb{U}_1 \mathbb{V}_0) & \\ 
+			0 \arrow{r} & \mathcal{M}(\mathbb{U}_0) \arrow{u}[swap]{u} \arrow{r} &  \mathcal{M}(\mathbb{U}_0 \mathbb{V}_0) \arrow{r} \arrow{u} & \mathcal{M}(\mathbb{U}_0 \mathbb{V}_1)  \\
+			& & \mathcal{M}(\mathbb{V}_0) \arrow{u} \arrow{r}{v} & \mathcal{M}(\mathbb{V}_1) \arrow{u} \\ 
+			& & 0 \arrow{u} & 0 \arrow{u}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram after 6.5.6}
+
+	\begin{equation*}
+		\begin{tikzcd}
+			\mathbb{U}_{0}^{\prime} \arrow{r} \arrow{d} & \mathbb{U}_0 \arrow{d} \\
+			Y^{\prime} \arrow{r} & Y
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.5.7}
+
+	\begin{equation*}
+		\begin{tikzcd}
+			Y \arrow[equals]{d} & \mathbb{W}_0 \arrow{l} \arrow{d} & \mathbb{W}_1 \arrow{d} \arrow[shift right]{l} \arrow[shift left]{l} \\ 
+			Y & \mathbb{V}_0 \arrow{l} & \mathbb{V}_1 \arrow[shift right]{l} \arrow[shift left]{l}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.5.8}
+
+	\begin{equation*}
+		\begin{tikzcd}
+			0 \arrow{r} & \widetilde{\mathcal{M}}(Y) \arrow[equals]{d} \arrow{r} & \widetilde{\mathcal{M}}(\mathbb{W}_0) \arrow{r} & \widetilde{\mathcal{M}}(\mathbb{W}_1) \\ 
+			& \widetilde{\mathcal{M}}(Y) \arrow{r} & \widetilde{\mathcal{M}}(\mathbb{V}_0) \arrow{r}{v} \arrow{u} & \widetilde{\mathcal{M}}(\mathbb{V}_1) \arrow{u}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.5.13}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & M \arrow{r}{\alpha} & \prod M_i \arrow{r}{\beta} & \prod M_{ij}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.6.1}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{M} \arrow{r} & \mathcal{N} \arrow{r} & \mathcal{P}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.6.2}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			 \mathcal{M}(U) \arrow{r} & \mathcal{N}(U) \arrow{r} & \mathcal{P}(U)
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagrams in Proposition 6.6.3}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{M} \arrow{r} & \mathcal{N} \arrow{r} & \mathcal{P}
+		\end{tikzcd}
+	\end{equation*}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{M}(U) \arrow{r} & \mathcal{N}(U) \arrow{r} & \mathcal{P}(U)
+		\end{tikzcd}
+	\end{equation*}
+
+	\begin{equation*}
+		\begin{tikzcd}
+			 & 0 \arrow{d} & 0 \arrow{d} & 0 \arrow{d} \\ 
+			0 \arrow{r} & \mathcal{M}(U) \arrow{r}{u} \arrow{d}[swap]{r} & \mathcal{N}(U) \arrow{r}{v} \arrow{d}[swap]{s} & \mathcal{P}(U) \arrow{d} \\
+			0 \arrow{r} & \mathcal{M}(\mathbb{U}_0) \arrow{r}{u^{\prime}} \arrow{d}[swap]{r^{\prime}} & \mathcal{N}(\mathbb{U}_0) \arrow{r}{v^{\prime}} \arrow{d}[swap]{s^{\prime}} & \mathcal{P}(\mathbb{U}_0) \arrow{d} \\
+			0 \arrow{r} & \mathcal{M}(\mathbb{U}_1) \arrow{r}{u^{\prime\prime}} & \mathcal{N}(\mathbb{U}_1) \arrow{r} & \mathcal{P}(\mathbb{U}_1)
+		\end{tikzcd}
+	\end{equation*}
+
+	\begin{equation*}
+		\begin{tikzcd}
+			z \arrow{r}{u} \arrow{d}[swap]{r} & x \arrow{d}[swap]{s} \\
+			y \arrow{r}{u^{\prime}}  & s(x)
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagrams after the proof of Proposition 6.6.3}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{K} \arrow{r} & \mathcal{M} \arrow{r} & \mathcal{I} \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{I} \arrow{r} & \mathcal{N} \arrow{r} & \mathcal{C} \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagrams after the proof of Corollary 6.6.4}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{K}(U) \arrow{r} & \mathcal{M}(U) \arrow{r} & \mathcal{I}(U) \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{I}(U) \arrow{r} & \mathcal{N}(U) \arrow{r} & \mathcal{C}(U) \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.7.4}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{M}(k) \arrow{r}{f} & \mathcal{M}(k+d)
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.7.5}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{M} \arrow{r}{x_{0}^{k}} & \mathcal{M}(k)
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.7.7}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{O}_{X}^{k} \arrow{r}{m} & \mathcal{M}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.7.10}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{O}_{X}^{k} \arrow{r}{m} & \mathcal{M}
+		\end{tikzcd}
+	\end{equation*}
+
+
+	\subsection*{Diagram 6.7.11}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{O}(-d)^0 \arrow{r}{x_{0}^{-d}} & \mathcal{O}^0 \arrow{r}{m_0} & \mathcal{M}^0
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.8.6}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathfrak{m}_p \arrow{r} & \mathcal{O} \arrow{r}{\pi_p} & i_{\ast} \kappa \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.8.7}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathfrak{m}_p \cap \mathfrak{m}_{p^{\prime}} \arrow{r} & \mathcal{O} \arrow{r}{\pi_{p,p^{\prime}}} & i_{\ast} \kappa \oplus i_{\ast} \kappa^{\prime} \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram before Example 6.8.8}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & 0 \arrow{r} & \mathbb{C} \arrow{r} & \mathbb{C} \oplus \mathbb{C} \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{First diagram in 6.8.10}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{I}(U) \arrow{r} & \mathcal{O}(U) \arrow{r} & \overline{\mathcal{O}}(U) \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram in the proof of Lemma 6.8.13}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{M}(U_1) \arrow{r} & \mathcal{M}(U_{12}) \times \mathcal{M}(V) \arrow{r} & \mathcal{M}(V) \rlap{\  ,}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.9.1}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			M_0 \arrow{r} & M_1 \arrow{r} & M_2 \arrow{r} & \cdots
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram after Lemma 6.9.4}
+
+	\begin{equation*}
+		\begin{tikzcd}
+			\cdots \arrow{r} & M_{n} \arrow{r} \arrow{d}[swap]{\phi_n} & M_{n+1} \arrow{r} \arrow{d}[swap]{\phi_{n+1}} & \cdots \\ 
+			\cdots \arrow{r} & M_{n}^{\prime} \arrow{r} & M_{n+1}^{\prime} \arrow{r} & \cdots
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.9.6}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=small]
+			\mathcal{M}_{\bullet} = \{ \, \mathcal{M}_0 \arrow{r} & \mathcal{M}_1 \arrow{r} & \mathcal{M}_2 \arrow{r} & \cdots \, \}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.9.8}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{O} \arrow{r}{x_0} & \mathcal{O}(1) \arrow{r}{x_0} & \mathcal{O}(2) \arrow{r}{x_0} & \cdots \rlap{\  ,}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.9.9}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{M} \arrow{r}{x_0} & \mathcal{M}(1) \arrow{r}{x_0} & \mathcal{M}(2) \arrow{r}{x_0} & \cdots \rlap{\  ,}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.9.12}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{M}(U^0) \arrow{r}{x_{0}^{k}} & \left[\mathcal{M}(k)\right](U^0) \rlap{\  .}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram before 6.9.15}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{O}_{\mathbb{P}}(-d) \arrow{r} & \mathcal{O}_{\mathbb{P}} \arrow{r} & i_{\ast} \mathcal{O}_{X} \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.9.15}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{O}_{\mathbb{P}}(k-d) \arrow{r} & \mathcal{O}_{\mathbb{P}}(k) \arrow{r} & i_{\ast} \mathcal{O}_{X}(k) \arrow{r} & 0
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.9.17}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			0 \arrow{r} & \mathcal{M}(d-1) \arrow{r} & \mathcal{M}(d) \arrow{r} & i_{\ast} \mathcal{O}_{X}(d) \otimes \mathcal{M} \arrow{r} & 0 \rlap{\  .}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.9.20}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{O}_{X}^{k} \arrow{r}{m} & \mathcal{M}
+		\end{tikzcd}
+	\end{equation*}
+
+	\subsection*{Diagram 6.9.21}
+
+	\begin{equation*}
+		\begin{tikzcd}[sep=scriptsize]
+			\mathcal{O}(-d)^{0} \arrow{r}{x_{0}^{-d}} & \mathcal{O}^0 \arrow{r}{m_{0}} &  \mathcal{M}^0 \rlap{\  .}
+		\end{tikzcd}
+	\end{equation*}
+
+\end{document}

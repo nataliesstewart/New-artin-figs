@@ -1,0 +1,51 @@
+\documentclass{minimal}
+
+% Packages
+
+
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz}
+\usepackage{tkz-fct}
+\usepackage{pgfplots}
+
+\usepackage[active,tightpage]{preview}      
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{2mm}
+
+% Libraries
+
+\usetikzlibrary{matrix}
+\usetikzlibrary{arrows}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{trees}
+\usetikzlibrary{plotmarks}
+
+% TiKz Styling
+
+\pgfplotsset{compat=newest,every axis/.append style={
+                    axis x line=middle,    % put the x axis in the middle
+                    axis y line=middle,    % put the y axis in the middle
+                    axis line style={-,color=black}, % arrows on the axis
+                    xlabel={$x(t)$},          % default put x on x-axis
+                    ylabel={$y(t)$},          % default put y on y-axis
+                    ticks=none % take away ticks
+            }}
+            
+\tikzset{every pin edge/.style={draw=white}}
+
+
+\begin{document}
+
+  \begin{tikzpicture}
+  \begin{axis}[
+		xlabel=,
+		ylabel=,
+		grid=none,
+    axis lines=none,
+  ]
+
+  \addplot [thick,black,domain=-.5:.5,samples=2000]({(x - 1/8)/x^4}, {x}); 
+\end{axis}
+\end{tikzpicture}
+
+\end{document}
